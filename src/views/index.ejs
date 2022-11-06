@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+
+  .wrapper {
+    display: table;
+    width: 100vw;
+    height: 100vh;
+  }
+  .content {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+
+/* UI-PROGRESSBAR */
+  .progress-bar {
+    display: inline-block;
+    text-align: left;
+    height: 2em;
+    width: 18em;
+    padding: 1px;
+    margin: .3em .1em;
+    background-color: #fff;
+    border: 2px solid #eb2019;
+    border-radius: 2px;
+}
+  .progress-bar span {
+    display: inline-block;
+    height: 100%;
+    background-color: #eb2019;
+    transition: width .1s ease-in-out; 
+  }
+  
+.pb-round {
+  border-radius: 15px;
+}
+  .pb-round span {
+    min-width: 20px;
+    border-radius: 15px;
+  }
+
+  @keyframes animate-lines {
+    0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+  }
+
+  </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <div class="loader-logo"><img src="resources/Imagenes/deskapp-logo.svg" alt=""></div>
+        <div class="progress-bar pb-round pb-lines">
+          <span></span>
+        </div>
+        
+      </div>
+    </div>
+    
+    <!-- Example animation -->
+    <script type="text/javascript" >
+    var i = 0,
+      interval = setInterval(function(){
+      i+=4;
+      document.getElementsByTagName('span')[0].style.width = i+'%';
+      if(i == 100) {//Login/login
+        window.open("/login", "_self");        
+        clearInterval(interval);
+      }
+    }, 50);
+    
+    </script>
+  </body>
+</html>
