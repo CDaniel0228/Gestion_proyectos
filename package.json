@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/storage": "^6.7.0",
+    "alert": "^5.1.1",
     "dotenv": "^11.0.0",
     "ejs": "^3.1.8",
     "express": "^4.17.2",

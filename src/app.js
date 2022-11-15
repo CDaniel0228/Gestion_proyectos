@@ -24,8 +24,7 @@ app.use(require("./routes/index"));
 
 // Static files
 app.use("/public", express.static(path.join(__dirname, "public")));
-app.use('/js', express.static(__dirname + '/js'))
-
+app.use('/js', express.static(__dirname + '/js'));
 
 
 module.exports = app;

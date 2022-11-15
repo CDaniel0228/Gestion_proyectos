@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Basic Page Info -->
+	<meta charset="utf-8">
+	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="resources/css/Elements/core.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/Elements/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/Elements/jquery.steps.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/Elements/style.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/Elements/dropzone.css">
+
+
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
+
+    <link rel="icon" href="resources/Imagenes/usuario.png" type="image/png" />
+      <link rel="stylesheet" href="resources/css/Panel/bootstrap.min.css" />
+      <link rel="stylesheet" href="resources/css/Panel/style.css" />
+      <link rel="stylesheet" href="resources/css/Panel/responsive.css" />
+      <link rel="stylesheet" href="resources/css/Panel/colors.css" />
+      <link rel="stylesheet" href="resources/css/Panel/bootstrap-select.css" />
+      <link rel="stylesheet" href="resources/css/Panel/perfect-scrollbar.css" />
+      <link rel="stylesheet" href="resources/css/Panel/custom.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+</head>
+<body class="inner_page widgets">
+	<%- include('../menu') %>
+	<!--contenedor formularios-->
+		<div class="pd-ltr-20 xs-pd-20-10">
+			<div class="min-height-200px">
+				<div class="page-header">
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="title">
+								<h4>Crear proyecto</h4>
+							</div>
+							<nav aria-label="breadcrumb" role="navigation">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="/home">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Nuevo proyecto</li>
+								</ol>
+							</nav>
+						</div>
+						<div class="col-md-6 col-sm-12 text-right">
+							<div class="dropdown">
+								<a class="btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+									Noviembre 2022
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#">Export List</a>
+									<a class="dropdown-item" href="#">Policies</a>
+									<a class="dropdown-item" href="#">View Assets</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!---->
+				<div class="pd-20 card-box mb-30">
+					<div class="clearfix">
+						<h4 class="text-blue h4"> Nuevo proyecto</h4>
+						<input type="text" class="form-control" placeholder="Nombre del proyecto">
+					</div>
+					<div class="wizard-content">
+						<form action="/create" method="POST" class="tab-wizard wizard-circle wizard vertical">
+							<h5>Analisis</h5>
+							<section>
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Ducumentos o archivos</label>
+											<div class="dropzone" action="#" id="my-awesome-dropzone">
+												<div class="fallback">
+													<input type="file" name="A_file1" />
+												</div>
+											</div>
+										</div>
+										</div>	
+										<div class="col-md-4">
+											<div class="form-group">
+												<label>Ducumentos o archivos</label>
+												<div class="dropzone" action="#" id="my-awesome-dropzone">
+													<div class="fallback">
+														<input type="file" name="A_file2" />
+													</div>
+												</div>
+											</div>									
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Ducumentos o archivos</label>
+											<div class="dropzone" action="#" id="my-awesome-dropzone">
+												<div class="fallback">
+													<input type="file" name="A_file3" />
+												</div>
+											</div>
+										</div>									
+								</div>
+								</div>
+							</section>
+							<!-- Step 2 -->
+							<h5>Diseño</h5>
+							<section>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Job Title :</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Company Name :</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<label>Job Description :</label>
+											<textarea class="form-control"></textarea>
+										</div>
+									</div>
+								</div>
+							</section>
+							<!-- Step 3 -->
+							<h5>Produccion</h5>
+							<section>
+								<div class="row">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Ducumentos o archivos</label>
+											<div class="dropzone" action="#" id="my-awesome-dropzone">
+												<div class="fallback">
+													<input type="file" name="file" />
+												</div>
+											</div>
+										</div>
+										</div>	
+										<div class="col-md-4">
+											<div class="form-group">
+												<label>Ducumentos o archivos</label>
+												<div class="dropzone" action="#" id="my-awesome-dropzone">
+													<div class="fallback">
+														<input type="file" name="file" />
+													</div>
+												</div>
+											</div>									
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Ducumentos o archivos</label>
+											<div class="dropzone" action="#" id="my-awesome-dropzone">
+												<div class="fallback">
+													<input type="file" name="file" />
+												</div>
+											</div>
+										</div>									
+								</div>
+								</div>
+							</section>
+							<!-- Step 4 -->
+							<h5>Post-entrega</h5>
+							<section>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Behaviour :</label>
+											<input type="text" class="form-control">
+										</div>
+										<div class="form-group">
+											<label>Confidance</label>
+											<input type="text" class="form-control">
+										</div>
+										<div class="form-group">
+											<label>Result</label>
+											<select class="form-control">
+												<option>Select Result</option>
+												<option>Selected</option>
+												<option>Rejected</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Comments</label>
+											<textarea class="form-control"></textarea>
+										</div>
+									</div>
+								</div>
+							</section>
+							<button>Next</button>
+						</form>
+					</div>
+				</div>
+
+				<!-- success Popup html Start -->
+				<div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-body text-center font-18">
+								<h3 class="mb-20">Form Submitted!</h3>
+								<div class="mb-30 text-center"><img src="vendors/images/success.png"></div>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							</div>
+							<div class="modal-footer justify-content-center">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+			
+			
+	<!-- js -->
+	<script src="js/core.js"></script>
+	<script src="js/script.min.js"></script>
+	<script src="js/process.js"></script>
+	<script src="js/layout-settings.js"></script>
+	<script src="js/jquery.steps.js"></script>
+	<script src="js/steps-setting.js"></script>
+	<script src="js/dropzone.js"></script>
+	<script>
+		Dropzone.autoDiscover = false;
+		$(".dropzone").dropzone({
+			addRemoveLinks: true,
+			removedfile: function(file) {
+				var name = file.name;
+				console.log(name);
+				var _ref;
+				return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
+			}
+		});
+	</script>
+	
+
+</body>
+</html>
