@@ -24,10 +24,9 @@ const auth = getAuth(app)
 const db = getFirestore(app)
 const bucket = getStorage(app).bucket();
 
-const subir=bucket.upload("C:/Users/Daniel/Documents/kaspersky.pdf");
-
 module.exports = {
   app,
   auth,
   db,
+  bucket
 };

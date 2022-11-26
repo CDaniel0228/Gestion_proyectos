@@ -10,7 +10,7 @@ $(".tab-wizard").steps({
 		$('.steps .current').prevAll().addClass('disabled');
 	},
 	onFinished: function (event, currentIndex) {
-		$('#example-form');
+		$('#success-modal')
 		
 
 	}

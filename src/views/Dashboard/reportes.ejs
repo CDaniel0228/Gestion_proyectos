@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Reportes</title>	
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="resources/css/Elements/core.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/Elements/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/Elements/style.css">	
+</head>
+<body class="inner_page widgets">
+    <%- include('./menu') %>
+	<div class="mobile-menu-overlay"></div>
+		<div class="pd-ltr-20 xs-pd-20-10">
+			<div class="min-height-200px">
+				<div class="page-header">
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<div class="title">
+								<h4>Cards Hover</h4>
+							</div>
+							<nav aria-label="breadcrumb" role="navigation">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Reporte</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+				</div>	
+				<div class="pd-20 card-box mb-30">
+                    <div class="row margin_bottom_30">
+                        <% contacts.forEach(function(proyecto) { %>
+                        <div class="col-md-12 col-lg-4 widget_progress_section margin_bottom_30">
+                           <div class="white_shd full">
+                              <div class="widget_progress_bar">
+                                <p class="progress_no"><%= proyecto.nombre %></p>
+                                 <p class="progress_head"><%= (proyecto.link.length * 100)/10 %>%</p>
+                                 
+                                 <div class="progress_bar">
+                                    <!-- Skill Bars -->
+                                    <span class="skill" style="width:73%;">Lorem ipsum dolor sit amet <span class="info_valume"><%= (proyecto.link.length * 100)/10 %>%</span></span>                  
+                                    <div class="progress skill-bar ">
+                                       <div class="progress-bar progress-bar-animated progress-bar-striped" role="progressbar" aria-valuenow="<%= (proyecto.link.length * 100)/10 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= (proyecto.link.length * 100)/10 %>%"></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <% }); %>
+                     </div>
+				
+			</div>
+			
+		</div>
+	</div>
+	<!-- js -->
+
+    <script src="js/core.js"></script>
+	<script src="js/script.min.js"></script>
+	<script src="js/process.js"></script>
+	<script src="js/layout-settings.js"></script>
+    
+</body>
+</html>

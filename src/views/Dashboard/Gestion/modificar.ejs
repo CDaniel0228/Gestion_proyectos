@@ -22,7 +22,7 @@
 					<div class="row">
 						<div class="col-md-6 col-sm-12">
 							<div class="title">
-								<h4>Crear proyecto</h4>
+								<h4>Actualizar proyecto</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
@@ -50,11 +50,13 @@
         
         <!--class="tab-wizard wizard-circle wizard vertical" -->
         <div class="wizard-content">
-            <form action="/create" method="POST"  enctype="multipart/form-data">
+            <form action="/modificar" method="POST"  enctype="multipart/form-data">
                 <div class="clearfix">
-                    <h4 class="text-blue h4"> Nuevo proyecto</h4>
-                    <input type="text" class="form-control" name="nombre"  placeholder="Nombre del proyecto">
-                </div>
+                    <input type="text"  placeholder="Buscar nombre" name="nombre">
+                    <button class="fa fa-search" ></button><!--<i class="fa fa-search"></i>-->
+                 </div>
+             <br>
+               
                 <h5>Analisis</h5>
                 <section>
                     <div class="row">
@@ -95,43 +97,32 @@
                 <h5>Post-entrega</h5>
                 <section>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <label>Ducumentos 1</label>
-                                <div class="dropzone">
-                                    <div class="fallback">
-                                        <input type="file" name="myFiles" accept=".pdf" />
-                                    </div>
-                                </div>
+                                <label>Behaviour :</label>
+                                <input type="text" class="form-control">
                             </div>
-                            </div>	
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label>Ducumentos 2</label>
-                                    <div class="dropzone" >
-                                        <div class="fallback">
-                                            <input type="file" name="myFiles" accept=".pdf" />
-                                        </div>
-                                    </div>
-                                </div>									
-                        </div>
-                        <div class="col-md-4">
                             <div class="form-group">
-                                <label>Ducumentos 3</label>
-                                <div class="dropzone">
-                                    <div class="fallback">
-                                        <input type="file" name="myFiles" accept=".pdf" />
-                                    </div>
-                                </div>
-                            </div>									
+                                <label>Confidance</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Result</label>
+                                <select class="form-control">
+                                    <option>Select Result</option>
+                                    <option>Selected</option>
+                                    <option>Rejected</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Comments</label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                        </div>
                     </div>
                 </section>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Descripcion</label>
-                        <textarea class="form-control"  placeholder="opcional"></textarea>
-                    </div>
-                </div>
                 <input type="submit" value="Submit" />
             </form>
         </div>

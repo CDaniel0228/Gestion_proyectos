@@ -11,7 +11,7 @@
 	
 </head>
 <body class="inner_page widgets">
-    <%- include('./menu') %>
+    <%- include('../menu') %>
 	<div class="mobile-menu-overlay"></div>
 		<div class="pd-ltr-20 xs-pd-20-10">
 			<div class="min-height-200px">
@@ -33,7 +33,7 @@
 				<div class="pd-20 card-box mb-30">
 				<!-- Slide Bottom effect -->
 				<h5 class="h4 text-blue mb-10">Lista de proyectos</h5>
-				<form action="/buscar" method="POST" class="">
+				<form action="/eliminar" method="POST" class="">
 					<div class="">
 					   <input type="text" placeholder="Buscar nombre" name="nombre">
 					   <button class="fa fa-search" ></button><!--<i class="fa fa-search"></i>-->
@@ -52,8 +52,8 @@
 								<div class="da-overlay da-slide-bottom">
 									<div class="da-social">
 										<ul class="clearfix">
-											<label>Intro</label>
-											<a href="/data/<%=proyecto.id%>" >
+                                            <label>eliminar</label>
+											<a href="/data" method="POST">  
 										</ul>
 									</div>
 								</div>
