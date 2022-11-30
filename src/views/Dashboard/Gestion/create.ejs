@@ -55,6 +55,7 @@
                     <h4 class="text-blue h4"> Nuevo proyecto</h4>
                     <input type="text" class="form-control" name="nombre"  placeholder="Nombre del proyecto">
                 </div>
+                <br>
                 <h5>Analisis</h5>
                 <section>
                     <div class="row">
@@ -92,7 +93,34 @@
                 </section>
                 <!-- Step 2 -->
                 
-                <h5>Post-entrega</h5>
+                <h5>Diseño</h5>
+                <section>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Ducumentos 1</label>
+                                <div class="dropzone">
+                                    <div class="fallback">
+                                        <input type="file" name="myFiles" accept=".pdf" />
+                                    </div>
+                                </div>
+                            </div>
+                            </div>	
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Ducumentos 2</label>
+                                    <div class="dropzone" >
+                                        <div class="fallback">
+                                            <input type="file" name="myFiles" accept=".pdf" />
+                                        </div>
+                                    </div>
+                                </div>									
+                        </div>
+                        
+                    </div>
+                </section>
+                <!--otro-->
+                <h5>Produccion</h5>
                 <section>
                     <div class="row">
                         <div class="col-md-4">
@@ -125,14 +153,51 @@
                                 </div>
                             </div>									
                     </div>
-                </section>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Descripcion</label>
-                        <textarea class="form-control"  placeholder="opcional"></textarea>
-                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Ducumentos 4</label>
+                            <div class="dropzone">
+                                <div class="fallback">
+                                    <input type="file" name="myFiles" accept=".pdf" />
+                                </div>
+                            </div>
+                        </div>									
                 </div>
-                <input type="submit" value="Submit" />
+                    </div>
+                </section>
+                <!--otro-->
+                <h5>Post entrega</h5>
+                <section>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Ducumentos 1</label>
+                                <div class="dropzone">
+                                    <div class="fallback">
+                                        <input type="file" name="myFiles" accept=".pdf" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>	
+                    </div>
+                </section>
+                <h5>Descripcion</h5>
+                <section>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <div class="dropzone">
+                                    <div class="fallback">
+                                        <textarea class="form-control"  placeholder="opcional" name="descripcion"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>	
+                    </div>
+                   
+                </section>
+                
+                <input type="submit" value="Crear proyecto"/>
             </form>
         </div>
     </div>

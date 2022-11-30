@@ -1,7 +1,6 @@
 require("dotenv").config();
 
 const { getFirestore} = require("firebase-admin/firestore");
-const {getAuth} = require("firebase-admin/auth");
 const { getStorage } = require('firebase-admin/storage');
 const { initializeApp, cert } =require("firebase-admin/app");
 
@@ -20,13 +19,12 @@ const firebaseConfig = {
 };
 
 const app = initializeApp({credential: cert(serviceAccount),storageBucket:'registros-ce259.appspot.com'});
-const auth = getAuth(app)
 const db = getFirestore(app)
 const bucket = getStorage(app).bucket();
 
 module.exports = {
   app,
-  auth,
+  firebaseConfig,
   db,
   bucket
 };

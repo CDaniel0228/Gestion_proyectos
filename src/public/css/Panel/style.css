@@ -3278,7 +3278,7 @@ table.projects tr td:first-child {
 }
 
 .logo_login {
-    background: url('images/layout_img/login_image.jpg');
+    background: url('inicio.jpg');
     padding: 50px 0;
     background-position: center center;
     position: relative;

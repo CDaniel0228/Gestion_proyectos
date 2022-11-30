@@ -1,80 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="resources/css/Login/style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
-    <title>Register</title>
-</head>
-<body>
-<h2>Sign in/up Form</h2>
-<div class="container" id="container">
-  <div class="form-container sign-up-container">
-    <form action="/pb" method="POST">
-      <h1>Create Account</h1>
-      <div class="social-container">
-        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <title>login</title>
+      
+      <link rel="stylesheet" href="resources/css/Panel/bootstrap.min.css" />
+      <link rel="stylesheet" href="resources/css/Panel/style.css" />
+      <link rel="stylesheet" href="resources/css/Panel/responsive.css" />
+
+
+
+   </head>
+   <body class="inner_page login">
+      <div class="full_container">
+         <div class="container">
+            <div class="center verticle_center full_height">
+               <div class="login_section">
+                  <div class="logo_login">
+                     <div class="center">
+                      <label width="210" style="font-size: 60pt;" > Login</label>
+
+                     </div>
+                  </div>
+                  <div class="login_form">
+                     <form action="/login" method="POST">
+                        <fieldset>
+                           <div class="field">
+                              <label class="label_field">Email Address</label>
+                              <input type="email" name="email" placeholder="Email" />
+                           </div>
+                           <div class="field">
+                              <label class="label_field">Password</label>
+                              <input type="password" name="password" placeholder="Password" />
+                           </div>
+                           <br>
+                           <div class="field margin_0">
+                              <label class="label_field hidden">hidden label</label>
+                              <button class="main_bt">Sing In</button>
+                           </div>
+                        </fieldset>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-      <span>or use your email for registration</span>
-      <input type="text" placeholder="Name" />
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <button>Sign Up</button> <!-- accion-->
-    </form>
-  </div>
-
-  <div class="form-container sign-in-container">
-    <form action="/login" method="POST">
-      <h1>Sign in</h1>
-      <div class="social-container">
-        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-      <span>or use your account</span>
-      <input type="email" placeholder="Email" id="email" name="email"/>
-      <input type="password" placeholder="Password" id="password" name="password" />
-      <a href="#">Forgot your password?</a>
-      <button>Sign In</button> <!-- accion-->
-      <a  href="/home">link</a>
-
-    </form>
-  </div>
-  <div class="overlay-container">
-    <div class="overlay">
-      <div class="overlay-panel overlay-left">
-        <h1>Welcome Back!</h1>
-        <p>To keep connected with us please login with your personal info</p>
-        <button class="ghost" id="signIn">Sign In</button>
-      </div>
-      <div class="overlay-panel overlay-right">
-        <h1>Hello, Friend!</h1>
-        <p>Enter your personal details and start journey with us</p>
-        <button class="ghost" id="signUp">Sign Up</button>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-    const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
-
-signUpButton.addEventListener('click', () => {
-  container.classList.add("right-panel-active");
-});
-
-signInButton.addEventListener('click', () => {
-  container.classList.remove("right-panel-active");
-});
-</script>
-
-</body>
+      
+   </body>
 </html>
-
-

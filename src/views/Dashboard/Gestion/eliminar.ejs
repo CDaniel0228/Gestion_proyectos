@@ -53,7 +53,7 @@
 									<div class="da-social">
 										<ul class="clearfix">
                                             <label>eliminar</label>
-											<a href="/data" method="POST">  
+											<a href="#" onclick="fd('<%=proyecto.id%>')">  
 										</ul>
 									</div>
 								</div>
@@ -78,6 +78,14 @@
 	<script src="js/script.min.js"></script>
 	<script src="js/process.js"></script>
 	<script src="js/layout-settings.js"></script>
+	<script>
+		function fd(id){
+		if (confirm("¿Seguro que quiere eliminar?") == true) {
+		window.location='/confirmar/'+id
+		} 
+	}
+	</script>
+	
     
 </body>
 </html>
