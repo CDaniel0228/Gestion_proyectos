@@ -202,7 +202,6 @@ check("password").isLength({min: 7, max: 15}).withMessage("minimo 7").trim(),],
   const errors = validationResult(req)
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app)
-
   if (!errors.isEmpty()) {
     alert(errors.array());
   }else{
@@ -215,6 +214,7 @@ check("password").isLength({min: 7, max: 15}).withMessage("minimo 7").trim(),],
   } catch (error) {
     console.log(error);
   }
+  
 }
 });
 
