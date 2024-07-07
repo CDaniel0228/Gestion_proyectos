@@ -44,7 +44,7 @@ pipeline {
     post {
         always {
             echo 'Limpieza...'
-            sh "docker rmi $DOCKER_IMAGE"
+            //sh "docker rmi $DOCKER_IMAGE"
         }
         success {
             echo 'Pipeline ejecutado con éxito!'
