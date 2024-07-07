@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo 'Construyendo la imagen Docker...'
                 script {
-                    docker.build("$DOCKER_IMAGE")
+                    sh "docker build -t $DOCKER_IMAGE ."
                 }
             }
         }
@@ -44,7 +44,7 @@ pipeline {
     post {
         always {
             echo 'Limpieza...'
-            //sh "docker rmi $DOCKER_IMAGE"
+            // Aquí puedes agregar otras tareas de limpieza si es necesario
         }
         success {
             echo 'Pipeline ejecutado con éxito!'
